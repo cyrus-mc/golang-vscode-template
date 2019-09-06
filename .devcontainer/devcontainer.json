@@ -4,26 +4,25 @@
   "service": "go",
   "workspaceFolder": "/workspace",
 
-  "appPort": [9000],
 
-  "runArgs": [
-    "-u", "vscode",
+	"runArgs": [
+		"-u", "vscode",
 
-    "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"
-  ],
+		"--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"
+	],
 
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash",
-    "go.gopath": "/go",
-    "go.inferGopath": true,
-    "go.useLanguageServer": true,
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"go.gopath": "/go",
+		"go.inferGopath": true,
+		"go.useLanguageServer": true,
     "remote.extensionKind": {
       "ms-azuretools.vscode-docker": "workspace"
     }
-  },
+	},
 
-  "extensions": [
-    "ms-vscode.go",
+	"extensions": [
+		"ms-vscode.go",
     "ms-azuretools.vscode-docker"
-  ]
+	]
 }
