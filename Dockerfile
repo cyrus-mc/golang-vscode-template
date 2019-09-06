@@ -43,6 +43,10 @@ RUN go get -x -d github.com/stamblerre/gocode 2>&1 \
      && go build -o gocode-gomod github.com/stamblerre/gocode \
      && mv gocode-gomod $GOPATH/bin/
 
+# install kubectl
+RUN curl -L https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
+    && chmod +x /usr/local/bin/kubectl
+
 # install Go tools
 RUN go get -u -v \
        github.com/mdempsky/gocode \
