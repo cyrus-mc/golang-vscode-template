@@ -4,7 +4,6 @@
   "service": "go",
   "workspaceFolder": "/workspace",
 
-	"appPort": [9000],
 
 	"runArgs": [
 		"-u", "vscode",
