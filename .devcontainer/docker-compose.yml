@@ -7,7 +7,7 @@ version: '3.4'
 services:
   go:
     # Uncomment the next line to use a non-root user. See https://aka.ms/vscode-remote/containers/non-root-user.
-    # user: 1000
+    user: "1000"
 
     build:
       context: .
@@ -23,7 +23,7 @@ services:
 
       # Forwards the local Docker socket to the container.
       - /var/run/docker.sock:/var/run/docker.sock
-      - ~/.kube:/root/.kube
+      - ~/.kube:/home/vscode/.kube
 
     # Uncomment the next four lines if you will use a ptrace-based debuggers like C++, Go, and Rust.
     # cap_add:
